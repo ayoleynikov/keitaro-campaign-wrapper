@@ -1,0 +1,16 @@
+.env
+node_modules/
+frontend/dist/
+backend/.venv/
+backend/data/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.db
+.DS_Store
+# Local live QA journal/DB (not distributable)
+qa-private/
+.venv/
+*.log
+.env.*
+!.env.example

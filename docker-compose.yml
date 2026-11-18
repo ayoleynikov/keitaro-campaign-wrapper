@@ -1,0 +1,27 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    ports:
+      - "${BACKEND_PORT:-8801}:8801"
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: sqlite:///./data/app.db
+    volumes:
+      - backend-data:/app/data
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    ports:
+      - "43123:43123"
+    environment:
+      VITE_DEV_API_PROXY: http://backend:8801
+    depends_on:
+      - backend
+
+volumes:
+  backend-data:

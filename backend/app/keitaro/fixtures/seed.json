@@ -1,0 +1,33 @@
+{
+  "domains": [
+    {"id": 1, "name": "track.demo.example", "state": "active"},
+    {"id": 2, "name": "redirect.demo.example", "state": "active"}
+  ],
+  "groups": [
+    {"id": 10, "name": "Default campaigns", "type": "campaigns", "position": 1},
+    {"id": 11, "name": "Test GEO", "type": "campaigns", "position": 2}
+  ],
+  "traffic_sources": [
+    {"id": 100, "name": "Demo Source A", "state": "active"},
+    {"id": 101, "name": "Demo Source B", "state": "active"}
+  ],
+  "offers": [
+    {"id": 5001, "name": "Offer Alpha — US", "state": "active"},
+    {"id": 5002, "name": "Offer Beta — DE", "state": "active"},
+    {"id": 5003, "name": "Offer Gamma — PL", "state": "active"},
+    {"id": 5004, "name": "Google redirect template", "state": "active"},
+    {"id": 5005, "name": "Offer Delta — extra", "state": "active"}
+  ],
+  "stream_filters": [
+    {"value": "country", "tooltip": "Country", "group": "geo"},
+    {"value": "region", "tooltip": "Region", "group": "geo"}
+  ],
+  "streams_actions": [
+    {"value": "http", "tooltip": "HTTP redirect"},
+    {"value": "show_text", "tooltip": "Show text"}
+  ],
+  "campaigns": [],
+  "streams": [],
+  "next_campaign_id": 2000,
+  "next_stream_id": 3000
+}

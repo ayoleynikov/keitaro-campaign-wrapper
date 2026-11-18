@@ -1,0 +1,166 @@
+:root {
+  color: #e8edf5;
+  background: #0f1419;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(1200px 600px at 10% -10%, #1a2a44 0%, #0f1419 55%);
+}
+
+.app-shell {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.app-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+nav {
+  display: flex;
+  gap: 0.5rem;
+}
+
+button {
+  border: 1px solid #3d4f6f;
+  background: #1b2638;
+  color: inherit;
+  border-radius: 8px;
+  padding: 0.55rem 1rem;
+  cursor: pointer;
+  font: inherit;
+}
+
+button:hover {
+  border-color: #6b8cff;
+}
+
+button.active {
+  background: #2a3f66;
+  border-color: #8aa8ff;
+}
+
+button.ghost {
+  background: transparent;
+}
+
+.panel {
+  background: rgba(20, 28, 40, 0.92);
+  border: 1px solid #2a3548;
+  border-radius: 14px;
+  padding: 1.25rem 1.35rem;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+.panel h2 {
+  margin: 0 0 0.5rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem 1rem;
+  margin-top: 1rem;
+}
+
+.form-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.92rem;
+}
+
+.form-grid .wide {
+  grid-column: 1 / -1;
+}
+
+input,
+select {
+  border: 1px solid #3a4a63;
+  background: #0c111a;
+  color: inherit;
+  border-radius: 8px;
+  padding: 0.5rem 0.65rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.muted {
+  color: #9aa8bc;
+  font-size: 0.92rem;
+}
+
+.error {
+  color: #ff8f8f;
+}
+
+.success {
+  color: #82e0aa;
+}
+
+.warn {
+  color: #f4c95d;
+}
+
+.table-wrap {
+  margin-top: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.5rem;
+  border-bottom: 1px solid #2a3548;
+}
+
+.row-muted td {
+  color: #7a8599;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.row-draft td {
+  background: rgba(244, 201, 93, 0.08);
+}
+
+.row-clean td {
+  background: transparent;
+}
+
+.state-removed {
+  color: #7eb8ff;
+  font-weight: 500;
+}
+
+@media (max-width: 640px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
